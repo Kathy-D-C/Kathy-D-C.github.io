@@ -74,4 +74,15 @@
     var informeFinal = document.getElementById('informeFinal');
     informeFinal.innerHTML = informe;
   }
+
+  /*function guardarRespuestas() {
+    var respuestas = [];
   
+    var opciones = document.querySelectorAll('input[type="radio"]:checked');
+    opciones.forEach(function(opcion) {
+      respuestas.push({
+        pregunta: opcion.name,
+        respuesta: opcion.value,
+        puntaje: parseInt(opcion.dataset.puntaje)
+      });
+  */
