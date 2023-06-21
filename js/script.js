@@ -20,7 +20,7 @@
   
   var respuestas = []; // Array para almacenar las respuestas
 
-  function calcularPuntaje() {
+    function calcularPuntaje() {
     // Obtiene todas las preguntas y el puntaje total
     var preguntas = document.getElementsByClassName('pregunta');
     var puntajeTotal = 0;
@@ -51,14 +51,20 @@
     // Muestra el resultado y el porcentaje de cumplimiento
     var resultado = document.getElementById('resultado');
     resultado.innerHTML = 'Puntaje final: ' + puntajeTotal;
+  }  
+
+
+
+
+  
   
   /* Calcula el porcentaje de cumplimiento
     var porcentajeCumplimiento = (puntajeTotal / (preguntas.length * 5)) * 100;
       
     // Muestra el porcentaje de cumplimiento
     var recomendacion = document.getElementById('recomendacion');
-    recomendacion.innerHTML = 'Porcentaje de cumplimiento: ' + porcentajeCumplimiento.toFixed(2) + '%';  */
-  }
+    recomendacion.innerHTML = 'Porcentaje de cumplimiento: ' + porcentajeCumplimiento.toFixed(2) + '%';  
+  }*/
   
   function generarInforme() {
     // Crea una variable para almacenar el informe final
@@ -74,8 +80,8 @@
     var informeFinal = document.getElementById('informeFinal');
     informeFinal.innerHTML = informe;
   }
-
-  /*function guardarRespuestas() {
+ 
+ /* function guardarRespuestas() {
     var respuestas = [];
   
     var opciones = document.querySelectorAll('input[type="radio"]:checked');
@@ -85,4 +91,38 @@
         respuesta: opcion.value,
         puntaje: parseInt(opcion.dataset.puntaje)
       });
+    });
+  
+    localStorage.setItem('respuestas', JSON.stringify(respuestas));
+  
+    // Avanzar a la siguiente página
+    window.location.href = 'pagina_siguiente.html'; // Reemplaza "pagina_siguiente.html" con el nombre de tu siguiente página
+  }
+ 
+  function calcularPuntaje() {
+  var respuestasGuardadas = localStorage.getItem('respuestas');
+  if (respuestasGuardadas) {
+    var respuestas = JSON.parse(respuestasGuardadas);
+
+    var puntajeTotal = 0;
+    var recuento = {};
+
+    respuestas.forEach(function(respuesta) {
+      puntajeTotal += respuesta.puntaje;
+
+      if (recuento[respuesta.respuesta]) {
+        recuento[respuesta.respuesta]++;
+      } else {
+        recuento[respuesta.respuesta] = 1;
+      }
+    });
+
+    var recuentoRespuestas = document.getElementById('recuentoRespuestas');
+    recuentoRespuestas.innerHTML = 'Puntaje Total: ' + puntajeTotal + '<br><br>';
+
+    for (var respuesta in recuento) {
+      recuentoRespuestas.innerHTML += respuesta + ': ' + recuento[respuesta] + ' respuestas<br>';
+    }
+  }
+}
   */
