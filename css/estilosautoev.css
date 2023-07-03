@@ -1,7 +1,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root{
-    --padding-container: 100px 0;
+    --padding-container: 50px 0;
     --color-title: #001A49;
 }
 
@@ -123,6 +123,14 @@ body{
    color: var(--color-title);
    font-size: 1.5rem;
    margin-bottom: 25px;
+}
+
+h3{
+   width: fit-content;
+   color: var(--color-title);
+   font-size: 1.3rem;
+   margin: 0px;
+   padding: 1rem;
 }
 
 .about_paragraph{

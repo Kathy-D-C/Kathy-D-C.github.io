@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./images/candado.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilosenc2.css">
+    <link rel="stylesheet" href="./css/paginacion.css">
 
     <meta name="theme-color" content="#2091F9">
     <!-- Primary Meta Tags -->
@@ -39,9 +40,6 @@
         <h2 class="subtitle">Autoevaluación "Protección de Datos sobre la transferencia internacional de datos personales"</h2>
         <p class="about_paragraph"> Esta lista de autoevaluación es solo una guía para ayudarte a asegurar que tu empresa cumple con los derechos del titular de datos personales. </p>
         <br><a href="./AutoEvaluacion.html" class="cta">Volver</a>
-
-       
-
     </section>
 
     <section class="knowledge">
@@ -50,7 +48,7 @@
             <div class="knowledge_texts">
 
                 <div class="pregunta">
-                    <h2 class="subtitle">DETERMINACIÓN DE PAISES ADECUADOS </h2>
+                    <h2 class="subtitle section">DETERMINACIÓN DE PAISES ADECUADOS </h2>
                     <h2 class="subtitle">1.- ¿Hemos verificado si el país al que se realizará la transferencia proporciona niveles adecuados de protección de datos personales según los estándares establecidos en la ley?</h2>
                     <label><input type="radio" name="opcion1" value="Opcion1" data-puntaje="0">Aún no implementado</label><br>
                     <label><input type="radio" name="opcion1" value="Opcion2" data-puntaje="1">Parcialmente implementado</label><br>
@@ -67,7 +65,7 @@
                 </div>
                 
                 <br><br><div class="pregunta">
-                    <h2 class="subtitle">BASE LEGAL PARA LA TRANSFERENCIA</h2>
+                    <h2 class="subtitle section">BASE LEGAL PARA LA TRANSFERENCIA</h2>
                     <h2 class="subtitle">3.- ¿Hemos identificado la base legal válida que respalda la transferencia internacional de datos? (por ejemplo, consentimiento del titular, cláusulas contractuales, cumplimiento de obligaciones legales, etc.)</h2>
                     <label><input type="radio" name="opcion3" value="Opcion1" data-puntaje="0">Aún no implementado</label><br>
                     <label><input type="radio" name="opcion3" value="Opcion2" data-puntaje="1">Parcialmente implementado</label><br>
@@ -76,7 +74,7 @@
                 </div>
 
                 <br><br><div class="pregunta">
-                    <h2 class="subtitle">INSTRUMENTOS LEGALES Y CLÁUSULAS CONTRACTUALES</h2>
+                    <h2 class="subtitle section">INSTRUMENTOS LEGALES Y CLÁUSULAS CONTRACTUALES</h2>
                     <h2 class="subtitle">4.- ¿Hemos establecido cláusulas contractuales u otros instrumentos jurídicos con el receptor de los datos que garanticen los derechos y obligaciones de los titulares de datos y los medios de control?</h2>
                     <label><input type="radio" name="opcion4" value="Opcion1" data-puntaje="0">Aún no implementado</label><br>
                     <label><input type="radio" name="opcion4" value="Opcion2" data-puntaje="1">Parcialmente implementado</label><br>
@@ -93,7 +91,7 @@
                 </div>
                 
                 <br><br><div class="pregunta">
-                    <h2 class="subtitle">AUTORIZACIÓN DE LA AGENCIA DE PROTECCIÓN DE DATOS</h2>
+                    <h2 class="subtitle section">AUTORIZACIÓN DE LA AGENCIA DE PROTECCIÓN DE DATOS</h2>
                     <h2 class="subtitle">6.- ¿Hemos verificado si la transferencia internacional de datos requiere autorización expresa de la Agencia de Protección de Datos?</h2>
                     <label><input type="radio" name="opcion6" value="Opcion1" data-puntaje="0">Aún no implementado</label><br>
                     <label><input type="radio" name="opcion6" value="Opcion2" data-puntaje="1">Parcialmente implementado</label><br>
@@ -110,7 +108,7 @@
                 </div>
 
                 <br><br><div class="pregunta">
-                    <h2 class="subtitle">GARANTÍAS DE PROTECCIÓN DE DATOS</h2>
+                    <h2 class="subtitle section">GARANTÍAS DE PROTECCIÓN DE DATOS</h2>
                     <h2 class="subtitle">8.- ¿Hemos implementado medidas y garantías adecuadas para proteger los derechos de las personas y la seguridad de la información transferida?</h2>
                     <label><input type="radio" name="opcion8" value="Opcion1" data-puntaje="0">Aún no implementado</label><br>
                     <label><input type="radio" name="opcion8" value="Opcion2" data-puntaje="1">Parcialmente implementado</label><br>
@@ -127,7 +125,7 @@
                 </div>
 
                 <br><br><div class="pregunta">
-                    <h2 class="subtitle">FISCALIZACIÓN Y CUMPLIMIENTO</h2>
+                    <h2 class="subtitle section">FISCALIZACIÓN Y CUMPLIMIENTO</h2>
                     <h2 class="subtitle">10.- ¿Hemos establecido mecanismos internos para supervisar y fiscalizar las transferencias internacionales de datos?</h2>
                     <label><input type="radio" name="opcion10" value="Opcion1" data-puntaje="0">Aún no implementado</label><br>
                     <label><input type="radio" name="opcion10" value="Opcion2" data-puntaje="1">Parcialmente implementado</label><br>
@@ -151,19 +149,14 @@
         
     </section>
 <!-----------------------------------------------------------Calculo de resultados--------------------------------------------------------------------------------------------->
-    <section class="container about">
-        <h2 class="subtitle"> ¿Cómo fué tu experiencia?</h2>
-        <p class="questions_copy"> Ve el resultado final del test de protección de datos</p>
-       
-       <button class= "cta" onclick="calcularPuntaje()">Calcular Puntaje</button><br>
-        <br><div id="resultado"></div>
-
-        <!--Genera informe final-->
-
-        <br><button class= "cta" onclick="calcularRecuento()">Ver respuestas</button><br>
-        <br><div id="recuentoRespuestas"></div>
-        
-    </section>
+<section id="report">
+    <div id="validation_error" class="page_selector">
+        <h4>Asegurese de que todas las preguntas fueron respondidas e intente nuevamente</h4>
+    </div>
+    <div class="page_selector">
+        <button class="cta" id="generate">Generar informe</button> 
+    </div> 
+</section>  
 <!-----------------------------------------------------------Fin Calculos----------------------------------------------------------------------------------------------------------->
 
 </main>
@@ -211,9 +204,8 @@
 </footer>
 
 <script src="./js/questions.js"></script>
-<script src="./js/menu.js"></script>
+<!-- <script src="./js/menu.js"></script> -->
 <script src="./js/script.js"></script>
-<script src="./js/Calculorecuento.js"></script>
 
 </body>
 </html>

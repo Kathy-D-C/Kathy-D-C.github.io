@@ -1,0 +1,28 @@
+:root{
+    --color-error: #f0484271;
+}
+
+/* Estilos paginacion */
+.oculto, #validation_error{
+    display: none;
+}
+
+.page_selector{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.page_selector > *{
+    margin-inline: 10px;
+    padding-inline: 50px;
+}
+
+#report{
+    padding: 1px 0;
+}
+
+h4{
+    width: fit-content;
+    padding: 10px;
+}

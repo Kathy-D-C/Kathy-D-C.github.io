@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./images/candado.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilosenc2.css">
+    <link rel="stylesheet" href="./css/paginacion.css">
 
     <meta name="theme-color" content="#2091F9">
     <!-- Primary Meta Tags -->
@@ -36,7 +37,7 @@
 
 <main>
     <section class="container about">
-        <h2 class="subtitle">Autoevaluación "Datos Personales de Obligaciones Económicas"</h2>
+        <h2 class="subtitle">Autoevaluación: "Datos Personales de Obligaciones Económicas"</h2>
         <p class="about_paragraph"> Esta lista de autoevaluación es solo una guía para ayudarte a asegurar que tu empresa cumple con los derechos del titular de datos personales. </p>
         <br><a href="./AutoEvaluacion.html" class="cta">Volver</a>
 
@@ -137,19 +138,14 @@
         
     </section>
 <!-----------------------------------------------------------Calculo de resultados--------------------------------------------------------------------------------------------->
-    <section class="container about">
-        <h2 class="subtitle"> ¿Cómo fué tu experiencia?</h2>
-        <p class="questions_copy"> Ve el resultado final del test de protección de datos</p>
-       
-       <button class= "cta" onclick="calcularPuntaje()">Calcular Puntaje</button><br>
-        <br><div id="resultado"></div>
-
-        <!--Genera informe final-->
-
-        <br><button class= "cta" onclick="calcularRecuento()">Ver respuestas</button><br>
-        <br><div id="recuentoRespuestas"></div>
-        
-    </section>
+<section id="report">
+    <div id="validation_error" class="page_selector">
+        <h4>Asegurese de que todas las preguntas fueron respondidas e intente nuevamente</h4>
+    </div>
+    <div class="page_selector">
+        <button class="cta" id="generate">Generar informe</button> 
+    </div> 
+</section>  
 <!-----------------------------------------------------------Fin Calculos----------------------------------------------------------------------------------------------------------->
 
 </main>
@@ -197,9 +193,8 @@
 </footer>
 
 <script src="./js/questions.js"></script>
-<script src="./js/menu.js"></script>
+<!-- <script src="./js/menu.js"></script> -->
 <script src="./js/script.js"></script>
-<script src="./js/Calculorecuento.js"></script>
 
 </body>
 </html>
