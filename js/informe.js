@@ -68,9 +68,9 @@ const main = (function(){
 
     function RenderScore(score) {
         if(score > 50)
-        div_score.innerHTML = `<h3 class="subtitle">Su empresa cumple en un ${score}% </h3>`
+        div_score.innerHTML = `<h2 class="subtitle">Su empresa cumple en un ${score}% </h2>`
         else
-        div_score.innerHTML = `<h3 class="subtitle">Su empresa cumple en un ${score}% </h3>`
+        div_score.innerHTML = `<h2 class="subtitle">Su empresa cumple en un ${score}% </h2>`
     }
 
     return init();

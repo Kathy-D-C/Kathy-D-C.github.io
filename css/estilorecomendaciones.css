@@ -19,7 +19,7 @@ body{
 
  .hero{
     width: 100%;
-    height: 10vh;
+    height: 50vh;
     min-height: 600px;
     max-height: 800px;
     position:relative;
@@ -35,7 +35,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg,#00000041 0%,#0000008c 100%),url(../images/autoev.jpg);
+    background-image: linear-gradient(180deg,#00000041 0%,#0000008c 100%),url(../images/cybersecurity-banner-1170.png);
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
     z-index: -1;
