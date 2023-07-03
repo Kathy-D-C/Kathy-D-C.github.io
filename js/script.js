@@ -90,7 +90,7 @@ const main = (function () {
 
   function RedirectToReport(){
     const current_url = window.location.href
-    const redirection_url = current_url.replace(regex_url, `/recomendaciones.html`)
+    const redirection_url = current_url.replace(regex_url, `/Recomendaciones.html`)
     console.log(redirection_url);
     window.location.href = redirection_url
   }
